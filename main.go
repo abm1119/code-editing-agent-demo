@@ -12,6 +12,7 @@ import (
 	"strings"
 
 	"github.com/invopop/jsonschema"
+	"github.com/joho/godotenv"
 	"github.com/sashabaranov/go-openai"
 )
 
@@ -51,6 +52,8 @@ func NewAgent(
 // MAIN LOOP
 // ============================================================================
 func main() {
+	_ = godotenv.Load() // Load .env file if it exists
+
 	apiKey := os.Getenv("GEMINI_API_KEY")
 	if apiKey == "" {
 		apiKey = os.Getenv("OPENAI_API_KEY") // Fallback
@@ -60,7 +63,7 @@ func main() {
 
 	// Fallback defaults for Google Gemini
 	if model == "" {
-		model = "gemini-2.5-flash-lite"
+		model = "gemini-2.5-flash"
 	}
 	if baseURL == "" {
 		// Google's official OpenAI-compatible endpoint
