@@ -774,6 +774,15 @@ if apiKey != "" {
 - [Original Guide](code-editing-agent-guide.md)
 - [JSON Schema](https://json-schema.org/)
 
+### Further Reading — Agent Architecture Deep Dives
+
+- [**Claude Code Unpacked**](https://ccunpacked.dev/) — In-depth breakdown of Claude Code's source code, revealing how Anthropic's flagship coding agent is built
+- [**"Emperor Has No Clothes" — AMP Code**](https://ampcode.com/notes/how-to-build-an-agent) — Building an agent in Go with the Claude SDK (the original inspiration for this project; already referenced above)
+- [**Why Smarter Models Make Worse Tools**](https://lucumr.pocoo.org/2026/7/4/better-models-worse-tools/) — Armin Ronacher's critical analysis of the tension between model capability and tool-making quality
+- [**Anthropic's Guide to Long-Running Harnesses**](https://www.anthropic.com/engineering/effective-harnesses-for-long-running-agents) — Two-agent architecture pattern for building robust, long-running agent systems
+- [**Google's Architecture for Long-Running, Stateful Agents**](https://developers.googleblog.com/build-long-running-ai-agents-that-pause-resume-and-never-lose-context-with-adk/) — State machine patterns with ADK for agents that pause, resume, and never lose context
+- [**Improving Deep Agents with Harness Engineering**](https://x.com/Vtrivedy10/status/2023805578561060992) — X/Twitter thread on practical harness engineering techniques to improve agent performance
+
 ---
 
 *"This is essentially all there is to the inner loop of a code-editing agent."*
